@@ -1,0 +1,200 @@
+/* General Page Layout */
+.registration-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw; /* Ensure it covers full width */
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden; /* Prevent scrollbars from the animation */
+
+    /* --- ANIMATED BACKGROUND STYLES START --- */
+    background: linear-gradient(
+      -45deg,
+      #ee7752, /* Orange */
+      #e73c7e, /* Pink */
+      #23a6d5, /* Light Blue */
+      #23d5ab  /* Teal */
+    );
+    background-size: 400% 400%; /* Make the gradient larger than the container */
+    animation: gradientAnimation 15s ease infinite; /* Apply the animation */
+    /* --- ANIMATED BACKGROUND STYLES END --- */
+}
+
+/* Registration Card */
+.registration-card {
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white for overlay effect */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2); /* Stronger, softer shadow */
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    animation: fadeInCard 1s ease-out; /* Add a fade-in animation for the card */
+}
+
+.registration-title {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.registration-subtitle {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* Form Group Styling */
+.registration-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.registration-form label {
+    display: block;
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="number"],
+.registration-form input[type="tel"],
+.registration-form input[type="password"],
+.registration-form input[type="email"], 
+.registration-form select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    color: #333;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.registration-form input:focus,
+.registration-form select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+/* Error Text */
+.error-text {
+    color: #dc3545;
+    font-size: 0.85em;
+    margin-top: 5px;
+}
+
+/* Register Button */
+.register-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+}
+
+.register-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.register-button:active {
+    background-color: #004085;
+    transform: translateY(0);
+}
+
+/* Form Messages (Success/Error) */
+.form-message {
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.95em;
+}
+
+.form-message.success {
+    background-color: #d4edda;
+    color: #28a745;
+    border: 1px solid #28a745;
+}
+
+.form-message.error {
+    background-color: #f8d7da;
+    color: #dc3545;
+    border: 1px solid #dc3545;
+}
+
+/* Login Link */
+.login-link-container {
+    margin-top: 25px;
+    font-size: 0.95em;
+    color: #777;
+}
+
+.login-link-container a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-link-container a:hover {
+    text-decoration: underline;
+}
+/* Group two form fields in a row */
+.form-row {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  .form-row .form-group {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  /* Make sure each form-group takes full width if alone */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+
+/* --- NEW KEYFRAME ANIMATION FOR GRADIENT (Same as Welcome/Login Page) --- */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* --- OPTIONAL: Animation for the registration card to fade in --- */
+@keyframes fadeInCard {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

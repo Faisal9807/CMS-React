@@ -1,0 +1,102 @@
+/* src/CSS/Footer.css */
+
+.footer {
+    min-height: 22rem;
+    background-color: white;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.875rem;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    padding-bottom: 2rem;
+  }
+  
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .footer-nav a:hover{
+    text-decoration: underline;
+  }
+  
+  @media (min-width: 768px) {
+    .footer-nav {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+  
+  .footer-link {
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-link:hover {
+    color: black;
+  }
+  
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .icon {
+    display: inline-block;
+  }
+  
+  .icon-facebook {
+    height: 21px;
+    width: auto;
+    margin-top: -1px;
+  }
+  
+  .icon-x {
+    height: 1rem;
+    width: 1rem;
+    margin-top: 2px;
+  }
+  
+  .icon-linkedin {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-top: -1px;
+  }
+  
+  .footer-copy {
+    margin-top: 2rem;
+  }
+  
+  .footer-contact {
+    margin-top: 1rem;
+    padding-bottom: 2rem;
+  }
+  
+  .contact-label {
+    font-weight: 600;
+    margin-right: 0.25rem;
+  }
+  
+  .contact-phone {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.875rem;
+    text-decoration: none;
+  }
+  
+  .contact-phone:hover {
+    color: #0284c7; /* Tailwind's sky-600 */
+  }
+  
