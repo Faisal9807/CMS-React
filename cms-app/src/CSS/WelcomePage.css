@@ -1,0 +1,109 @@
+/* src/CSS/WelcomePage.css */
+
+.welcome-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+  
+    /* --- ANIMATED BACKGROUND STYLES START --- */
+    background: linear-gradient(
+      -45deg,
+      #ee7752, /* Orange */
+      #e73c7e, /* Pink */
+      #23a6d5, /* Light Blue */
+      #23d5ab  /* Teal */
+    );
+    background-size: 400% 400%; /* Make the gradient larger than the container */
+    animation: gradientAnimation 15s ease infinite; /* Apply the animation */
+    /* --- ANIMATED BACKGROUND STYLES END --- */
+  }
+  
+  .welcome-content {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark overlay for readability */
+    padding: 40px 60px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    max-width: 800px;
+    margin: 20px;
+    animation: fadeIn 1.5s ease-out;
+  }
+  
+  .welcome-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+  
+  .welcome-content p {
+    font-size: 1.5em;
+    opacity: 0.9;
+  }
+  
+  .start-button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .start-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Keyframe animation for fade-in effect (already existing) */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* --- NEW KEYFRAME ANIMATION FOR GRADIENT --- */
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Responsive adjustments (already existing) */
+  @media (max-width: 768px) {
+    .welcome-content h1 {
+      font-size: 2.5em;
+    }
+    .welcome-content p {
+      font-size: 1.2em;
+    }
+    .welcome-content {
+      padding: 30px 40px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .welcome-content h1 {
+      font-size: 2em;
+    }
+    .welcome-content p {
+      font-size: 1em;
+    }
+    .welcome-content {
+      padding: 20px 30px;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: white;
+}

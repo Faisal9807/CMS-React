@@ -1,0 +1,28 @@
+/* src/CSS/ClaimListPage.css */
+
+.claim-list-page {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.claim-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.claim-table th,
+.claim-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.claim-table th {
+  background-color: #f4f4f4;
+}
+
+.error {
+  color: red;
+  margin-top: 20px;
+}

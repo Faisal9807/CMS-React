@@ -1,0 +1,375 @@
+/* LandingPage.css */
+
+/* Reset & Base */
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+  background-color: #f8fafc;
+  color: #1f2937;
+}
+
+/* Page Wrapper with optional animated gradient background */
+.page-wrapper {
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  background: linear-gradient(
+    -45deg,
+    #ee7752,
+    #e73c7e,
+    #23a6d5,
+    #23d5ab
+  );
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  color: white;
+}
+
+/* Overlay for readability */
+.page-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Ensure content stacks above overlay */
+.header,
+.main,
+.footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Gradient animation keyframes */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Header */
+
+.header {
+  background-color: rgba(30, 58, 138, 0.85);
+  padding: 1rem 2rem;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  backdrop-filter: saturate(180%) blur(10px);
+}
+
+.container.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.2s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.35rem 0.6rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  outline: none;
+}
+
+/* Login Button */
+
+.btn.login-btn {
+  margin-left: 1.5rem;
+  background-color: #2563eb;
+  border: none;
+  padding: 0.5rem 1.15rem;
+  color: white;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  user-select: none;
+}
+
+.btn.login-btn:hover,
+.btn.login-btn:focus {
+  background-color: #1e40af;
+  box-shadow: 0 0 8px #1e40afaa;
+  outline: none;
+}
+
+/* Profile Icon */
+
+.profile-icon {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-left: 1.5rem;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  transition: transform 0.2s ease;
+}
+
+.profile-icon:hover,
+.profile-icon:focus {
+  transform: scale(1.1) rotate(10deg);
+  outline: none;
+}
+
+/* Profile Popup */
+
+.profile-popup {
+  position: absolute;
+  right: 2rem;
+  top: 4.5rem;
+  background-color: #fff;
+  color: #000;
+  border-radius: 0.6rem;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  min-width: 220px;
+  user-select: none;
+}
+
+.profile-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #1e293b;
+}
+
+/* Logout Button */
+
+.logout-btn {
+  margin-top: 1rem;
+  background-color: #ef4444;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  user-select: none;
+}
+
+.logout-btn:hover,
+.logout-btn:focus {
+  background-color: #b91c1c;
+  box-shadow: 0 0 8px #b91c1caa;
+  outline: none;
+}
+
+/* Main Content */
+
+.main {
+  padding: 3rem 2rem;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: white;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  color: #d1d5db;
+  margin-top: 0.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Features Section */
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.feature-card {
+  background-color: #fff;
+  color: #000;
+  padding: 1.5rem 1.75rem;
+  border-radius: 1rem;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.12);
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.feature-card:hover,
+.feature-card:focus-within {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.feature-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+}
+
+/* Buttons (general) */
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+  margin: 0;
+  user-select: none;
+}
+
+.primary {
+  background-color: #2563eb;
+  color: #fff;
+}
+
+.primary:hover,
+.primary:focus {
+  background-color: #1e40af;
+  outline: none;
+}
+
+.secondary {
+  background-color: #6b7280;
+  color: #fff;
+}
+
+.secondary:hover,
+.secondary:focus {
+  background-color: #4b5563;
+  outline: none;
+}
+
+/* CTA Buttons */
+
+.cta-buttons {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+/* Key Features Section */
+
+.key-features {
+  margin-top: 3rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Section Title for Key Features */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Feature Cards inside Key Features */
+/* Slightly different background & border to distinguish */
+.key-features .feature-card {
+  background-color: #f3f4f6; /* lighter grey background */
+  color: #111827; /* darker text */
+  border: 2px solid #2563eb; /* subtle blue border */
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.15); /* blue-ish shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: default;
+}
+
+.key-features .feature-card:hover,
+.key-features .feature-card:focus-within {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
+  border-color: #1e40af;
+  outline: none;
+}
+
+/* Responsive adjustments for Key Features */
+@media (max-width: 768px) {
+  .key-features .feature-card {
+    width: 100%;
+  }
+}
+
+
+
+/* Footer */
+
